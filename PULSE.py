@@ -20,7 +20,7 @@ class PULSE(torch.nn.Module):
         cache_dir = Path(cache_dir)
         cache_dir.mkdir(parents=True, exist_ok = True)
         if self.verbose: print("Loading Synthesis Network")
-        with open_url("https://drive.google.com/uc?id=1TCViX1YpQyRsklTVYEJwdbmK91vklCo8", cache_dir=cache_dir, verbose=verbose) as f:
+        with open_url("https://drive.google.com/uc?id=1mi9IlWII7DFUJUoywzbJaDPjBXJQq13A", cache_dir=cache_dir, verbose=verbose) as f:
             self.synthesis.load_state_dict(torch.load(f))
 
         for param in self.synthesis.parameters():
